@@ -62,7 +62,7 @@ public class BaiduLocation extends CordovaPlugin {
 				@Override
 				public void run() {
 					locationClient = new LocationClient(cordova.getActivity());
-					locationClient.setAK("BfkPvjDGHC0ATZhIr6wxnHh9");//设置百度的ak
+					// locationClient.setAK("BfkPvjDGHC0ATZhIr6wxnHh9");//设置百度的ak
 					myListener = new MyLocationListener();
 					locationClient.registerLocationListener(myListener);
 					LocationClientOption option = new LocationClientOption();
@@ -70,7 +70,7 @@ public class BaiduLocation extends CordovaPlugin {
 					option.setCoorType("bd09ll");// 返回的定位结果是百度经纬度，默认值gcj02
 					option.setProdName("BaiduLoc");
 					option.setLocationMode(LocationMode.Device_Sensors);
-					option.disableCache(true);// 禁止启用缓存定位
+					// option.disableCache(true);// 禁止启用缓存定位
 					locationClient.setLocOption(option);
 
 					locationClient.start();
